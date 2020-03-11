@@ -4,72 +4,140 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>JS Trivia</title>
    <style>
      html, body {
     height: 100%;
     width: 100%;
 }
+
+.carousel-control-prev,
+.carousel-control-next{
+      bottom: 99%;
+}
     body{
         background-color: rgb(3, 116, 116);
     }
+
+    #startButton{
+      margin-left: 50%;
+      position: absolute;
+      top: 50%;
+    }
+
+    #surveyForm{
+        margin-top: 25px;
+        display: none;
+        width: 80%;
+        height: 40%;
+        margin: 0;
+    }
+
    </style>
   </head>
   <body>
+      <!--
+    <div id="startButton" class="justify-content-center container">
+    <button type="button" class="btn btn-primary">Take Survey</button>
+</div>-->
 
-    <div class="container h-100 d-flex justify-content-center">
-        <div class="jumbotron my-auto">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="my-auto" id="startButton">
+        <div id="startButton" class="">
+            <button type="button" class="btn btn-primary">Take Survey</button>
+        </div>
+    </div>
+ </div>
+
+    <div class="container d-flex justify-content-center">
+        <div class="jumbotron my-auto" id="surveyForm">
+            <div id="carouselControls" class="carousel slide" data-ride="false">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <h1>Form 1</h1>
+                    <h1>Question 1</h1>
+                    <h3>What does Console.log() do?</h3>
+                    <form>
+                        <div class="form-group">
+                          <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <input type="checkbox" aria-label="Checkbox for following text input">
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with checkbox">
+                          </div>
+                          
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                <input type="radio" aria-label="Radio button for following text input">
+                              </div>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Text input with radio button">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                      </form>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 2</h1>
+                    <h1>Question 2</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 4</h1>
+                    <h1>Question 3</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 5</h1>
+                    <h1>Question 4</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 6</h1>
+                    <h1>Question 5</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 7</h1>
+                    <h1>Question 6</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 8</h1>
+                    <h1>Question 7</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 9</h1>
+                    <h1>Question 8</h1>
                   </div>
                   <div class="carousel-item">
-                    <h1>Form 10</h1>
+                    <h1>Question 9</h1>
+                  </div>
+                  <div class="carousel-item">
+                    <h1>Question 10</h1>
                   </div>
                   <div class="carousel-item">
                     <h1>Results</h1>
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
               </div>
         </div>
      </div>
-
-
     <!-- Optional JavaScript -->
+    <script>
+        $( "#startButton" ).click(function() {
+            $("#startButton").replaceWith("");
+            $("#surveyForm").toggle();
+});
+    </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
