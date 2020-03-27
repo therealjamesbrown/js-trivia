@@ -8,17 +8,20 @@
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>JS Trivia</title>
+<!--Import for Google Font-->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300&display=swap" rel="stylesheet">
+
+    <title>Java Script Trivia</title>
   </head>
   <body>
+<main>
 <!--Heading-->
-    <h1 class="heading" id="heading">JS Trivia</h1>
-
+    <h1 class="heading">Java Script Trivia</h1><br>
 <!--Container for start button-->
     <div class="container" id="buttonContainer">
         <row class="align-items-center justify-content-center hide">
             <div class="col">
-                    <button class="btn btn-primary btn-lg start" id="startButton">Start Survey</button>
+                    <button class="btn btn-success btn-lg start" id="startButton">Start Survey</button>
           </div>
         </row>
       </div>
@@ -32,256 +35,343 @@
                         <div class="carousel-inner">
 
 <!--Question 1-->
-                          <div class="carousel-item active">
-                            <h3 class="display-4">Question #1</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1" checked>
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                                
-                              </form>
-                          </div>
+  <div class="carousel-item active">
+    <h3 class="display-4">Question #1</h3>
+    <h5>What does console.log() do?</h5>
+    <form>
+        <div class="form-group form">
+            <div class="form-check">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1" checked>
+                  <label class="form-check-label" for="jsQuizRadios1" id="jsQuizRadios1-1">
+                    Outputs a message to the web console.
+                  </label>
+                  <br>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1-2" value="option2">
+                  <label class="form-check-label" for="jsQuizRadios1" id="jsQuizRadios1-2">
+                    Iterates through each element of an array.
+                  </label>
+                  <br>
+                </li>
+                <li class="list-group-item">
+                  <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1-3" value="option3">
+                  <label class="form-check-label" for="jsQuizRadios1" id="jsQuizRadios1-3">
+                    Leaves comments in your code.
+                  </label>
+                </li>
+              </ul>
+              </div>
+        </div>
+        
+      </form>
+  </div>
 
 <!--Question 2-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #2</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #2</h3>
+    <h5>What is the proper Syntax for a For Loop?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1" id="jsQuizRadios2-1">
+                  for (i + 0; i = array.length; i++) {
+                    console.log(array[i]);
+                  }
+                </label>
+                  <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios2-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1" id="jsQuizRadios2-2">
+                  for (i = 0; i < array.length; i++) {
+                    console.log(array[i]);
+                  }
+                </label>
+                  <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios2-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1" id="jsQuizRadios2-3">
+                  for (i = 0; i < arraylength; i++) {
+                    console.log(array[i]);
+                  }
+                </label>
+              </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 3-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #3</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #3</h3>
+    <h5>Function(x,y){}, what is the name for the items within the parenthesis?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios3-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  Objects
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios3-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  Parameters
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios3-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  Booleans
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 4-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #4</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #4</h3>
+    <h5>What is the proper declaration for a variable?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios4-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  var myVar: value
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios4-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  var myVar != value
+                </label>
+                <br>
+              </li>
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios4-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  var myVar = value
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
-<!--Question 5-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #5</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <!--Question 5-->
+  <div class="carousel-item">
+    <h3 class="display-4">Question #5</h3>
+    <h5>What is the syntax for multiline comments in JavaScript?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios5-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  // comment
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios5-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  /* comment */
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios5-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  // comment \\
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 6-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #6</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #6</h3>
+    <h5>Which would display the third item in the array?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios6-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  console.log(array[2]);
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios6-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  console.log(array[1]);
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios6-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  console.log(array[3]);
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 7-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #7</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #7</h3>
+    <h5>JavaScript is a single threaded language?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios7-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  True
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios7-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  False
+                </label>
+                <br>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 8-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #8</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #8</h3>
+    <h5>What is the proper syntax to display multiple values with console.log()?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios8-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  console.log(value1 + value2);
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios8-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  console.log(value1 value2);
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios8-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  console.log(value1, value2);
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 9-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #9</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #9</h3>
+    <h5>What is an array?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios9-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  A set of values stored within a single variable.
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios9-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  A string method.
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios9-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  An assignment method.
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
 
 <!--Question 10-->
-                          <div class="carousel-item">
-                            <h3 class="display-4">Question #10</h3>
-                            <p>What does console.log() do?</p>
-                            <form>
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option1">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 1
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option2">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 2
-                                        </label><br>
-                                        <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios1" value="option3">
-                                        <label class="form-check-label" for="jsQuizRadios1">
-                                          Option 3
-                                        </label>
-                                      </div>
-                                </div>
-                              </form>
-                          </div>
+  <div class="carousel-item">
+    <h3 class="display-4">Question #10</h3>
+    <h5>What does the pop() method do in arrays?</h5>
+    <form>
+        <div class="form-group">
+            <div class="form-check">
+              <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios10-1" value="option1">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  Adds a new element to the end of the array.
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios10-2" value="option2">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  Adds a new element to the beginning of the array.
+                </label>
+                <br>
+                </li>
+                <li class="list-group-item">
+                <input class="form-check-input" type="radio" name="jsQuizRadios" id="jsQuizRadios10-3" value="option3">
+                <label class="form-check-label" for="jsQuizRadios1">
+                  Removes the last element of the array.
+                </label>
+                </li>
+              </div>
+        </div>
+      </form>
+  </div>
+  
 
 <!--Results Page-->
                           <div class="carousel-item">
-                            <h3 class="display-4">Results</h3>
-                            <p>Display Results Here</p>
+                            <li class="list-group-item">
+                            <h3 class="display-4 results">Results</h3>
+                            <p id="totalCorrect" value="0"></p>
+                            <button class="btn btn-success" id="retryButton">Retry</button>
+                            <button class="btn btn-success">Share Results</button>
+                            </li>
                           </div>
                         </div>
                   </div>
 
-<!--Next Question Button-->
-      <button type="button" id="nextQuestionButton" class="btn btn-primary btn-lg" id="nextQuestionButton">Next Question</button><br><br>
+<!--Next Question Button--><br>
+      <button type="button" id="nextQuestionButton" class="btn btn-success btn-lg" id="nextQuestionButton">Next Question</button><br><br>
       <a class="right carousel-control" href="#myCarousel" role="button" id="next">
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
@@ -292,17 +382,22 @@
           </div>
         </row>
       </div>
+      </main>
+      <footer style="color: white; text-align: center;">
+        Created by Team Simple.io
+      </footer>
 
 <!--Scripts to control various flows-->
 <script>
   $(document).ready(function(){
     
+/**VIEW CONTROLLER**/
     $( "#startButton" ).click(function() {
         //hide the start button
         $( "#startButton" ).toggle();
 
         //hide the heading
-        $("#heading").toggle();
+        $("#headingTest").toggle();
 
         //show the quiz
         $("#formContainer").toggle();
@@ -312,6 +407,8 @@
       
         // Go to the Next Question
         $("#nextQuestionButton").click(function(){
+
+          calcResults(correctAnswers);
           $("#myCarousel").carousel("next");
 
         //call add progress function to update progress bar
@@ -322,32 +419,71 @@
     });
   });
   
-//function to manage progress bar. We have 10 questions, so we'll increment by 1 or 10%. 
-    var progress;
+  $( "#retryButton" ).click(function() {
+    //TODO:
+    location.reload();
+  });
+
+/****MODEL***/
+
+    //variable declaration 
+    var progress, correctAnswers;
+
+    //initialize progress for progress bar
     progress=10;
+    //set correct answers in an array
+    correctAnswers = [
+      "jsQuizRadios1",
+      "jsQuizRadios2-2",
+      "jsQuizRadios3-2",
+      "jsQuizRadios4-3",
+      "jsQuizRadios5-2",
+      "jsQuizRadios6-1",
+      "jsQuizRadios7-1",
+      "jsQuizRadios8-1",
+      "jsQuizRadios9-1",
+      "jsQuizRadios10-3"
+      ];
+
+
+    //function to manage progress bar. We have 10 questions, so we'll increment by 1 or 10%. 
     function addProgress(){
       progress = progress + 10;      
       var elem = document.getElementById("progressBar"); 
       elem.style.width = progress + "%"; 
     }
   });
-//function to see if next button was clicked on slide 9, so we can update button text to reflect "submit", instead of next question.
-//passing progress in as a point to measure off of.
+  
+  //function to calculate the results. passing in the correctAnswer array and compare it to what
+  //is selected in the ui.
+    function calcResults(correctAnswers){
+      var totalCorrect = 0;
+      //for loop to iterate through selected answers and see if they are true or not
+      for(i=0; i<correctAnswers.length; i++){
+        var result = document.getElementById(correctAnswers[i]).checked;
+        if (result){
+          totalCorrect ++; 
+          console.log(totalCorrect);
+          $("#totalCorrect").html(`Your final score is:\n<br>${totalCorrect}/10`);
+       
+        }
+      }
+    }
+
+  //function to see if next button was clicked on slide 9, so we can update button text to reflect "submit", instead of next question.
+  //passing progress in as a point to measure off of.
     function checkForLastButton(progress){
       if (progress === 100){
         //change button text
         $("#nextQuestionButton").html("See Results");
 
-// handle display for final redsults page. get total and all the good stuff the user would want to know.
+  // handle display for final redsults page. get total and all the good stuff the user would want to know.
       }else if(progress > 100){
         //TODO: disable further forward clicks
         $("#nextQuestionButton").toggle();
 
         //TODO: hide progress bar
         $("#progressBar").toggle();
-
-        //TODO: display results in the results section
-        
 
       }
     }
@@ -356,8 +492,6 @@
     function validateInputs(){
 
     }
-
-
   </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
